@@ -1,0 +1,14 @@
+---
+- hostname: worker1
+  role: worker1
+  box: bento/ubuntu-20.10
+  cpus: 4
+  memory: 4048
+  ip: 192.168.57.101
+  provision: provision.sh
+  shares:
+    - host: C:/Users/ecrrmrc/rosetta
+      guest: /home/vagrant/rosetta
+    - host: C:/Users/ecrrmrc/.ssh
+      guest: /home/vagrant/.ssh.win
+  autostart: true
